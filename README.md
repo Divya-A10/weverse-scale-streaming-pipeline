@@ -7,7 +7,7 @@ I was attempting to tune into a live BTS broadcast on Weverse when the applicati
 
 As an engineer, my curiosity sparked. I didn't just want the stream to work—I wanted to understand exactly *why* it broke and *how* a system could be engineered to handle that massive, unpredictable scale. 
 
-###  The Core Philosophy: Code is the Base, Cloud is the Tool
+###  💡 The Core Philosophy: Code is the Base, Cloud is the Tool
 When breaking down this problem, I leaned heavily on a fundamental engineering truth which I learnt by engineers who do this successfully and brilliantly: **Clean, optimized algorithmic code is the foundation of everything; the cloud is merely a tool to scale that foundation.** If your core code structure is poorly designed, throwing expensive cloud resources at it won't fix the problem—it will just make your cloud bill incredibly expensive. Therefore, before spending a single dollar on cloud infrastructure, I challenged myself to build a local, cloud-native prototype that solves the scale problem fundamentally through software architecture. If this code can efficiently compress thousands of concurrent operations on a standard local machine, it will scale infinitely and cost-effectively when deployed onto enterprise cloud infrastructure.
 
 ## ☁️ System Architecture Overview
