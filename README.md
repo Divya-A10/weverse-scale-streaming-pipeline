@@ -1,4 +1,14 @@
 # High-Throughput Real-Time Streaming Pipeline (Weverse-Scale Simulation)
+## 📖 The Origin Story: From a Crashed BTS Live to System Design
+
+This project didn't start in a text editor; it started out of personal frustration. 
+
+I was attempting to tune into a live BTS broadcast on Weverse when the application suddenly choked, threw errors, and completely kicked me out of the stream. When I finally managed to re-authenticate and log back in, I looked at the interface: millions of global fans were joining, leaving, sending messages, and spamming heart interactions simultaneously. The pure volume of concurrent telemetry data was staggering. 
+
+As an engineer, my curiosity sparked. I didn't just want the stream to work—I wanted to understand exactly *why* it broke and *how* a system could be engineered to handle that massive, unpredictable scale. 
+
+### 💡 The Core Philosophy: Code is the Base, Cloud is the Tool
+When breaking down this problem, I leaned heavily on a fundamental engineering truth: **Clean, optimized algorithmic code is the foundation of everything; the cloud is merely a tool to scale that foundation.** If your core code structure is poorly designed, throwing expensive cloud resources at it won't fix the problem—it will just make your cloud bill incredibly expensive. Therefore, before spending a single dollar on cloud infrastructure, I challenged myself to build a local, cloud-native prototype that solves the scale problem fundamentally through software architecture. If this code can efficiently compress thousands of concurrent operations on a standard local machine, it will scale infinitely and cost-effectively when deployed onto enterprise cloud infrastructure.
 
 ## ☁️ System Architecture Overview
 This repository contains a production-grade, horizontally scalable real-time streaming data pipeline designed to ingest, buffer, aggregate, and persist high-concurrency client telemetry data under intense traffic spikes (simulating global live-stream viewer events on a platform like Weverse).
