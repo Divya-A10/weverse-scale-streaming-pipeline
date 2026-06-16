@@ -1,0 +1,33 @@
+start server: 
+uvicorn ingestion_gateway:app --host 127.0.0.1 --port 8080 --reload
+
+start locust
+locust -f locustfile.py
+ run on post 8080
+
+ To start postgresql@14 now and restart at login:
+  brew services start postgresql@14
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/postgresql@14/bin/postgres -D /opt/homebrew/var/postgresql@14
+
+  Bash
+brew services list
+You should see postgresql@14 marked as started in green text.
+
+Step 3: Create Your Database and User
+By default, PostgreSQL creates a default superuser named after your Mac's login username (which is divyaavanigadda). Let's log into the system console to create a dedicated database for your project.
+
+Open the PostgreSQL console:
+
+Bash
+psql postgres
+(Your terminal prompt will change to postgres=#, meaning you are inside the database).
+
+Create a brand new database named weverse_analytics:
+
+SQL
+CREATE DATABASE weverse_analytics;
+Connect to your new database:
+
+SQL
+\c weverse_analytics;
