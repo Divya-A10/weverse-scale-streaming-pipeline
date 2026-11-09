@@ -13,6 +13,9 @@ When breaking down this problem, I leaned heavily on a fundamental engineering t
 ##  System Architecture Overview
 This repository contains a production-grade, horizontally scalable real-time streaming data pipeline designed to ingest, buffer, aggregate, and persist high-concurrency client telemetry data under intense traffic spikes (simulating global live-stream viewer events on a platform like Weverse).
 
+
+![Uploading diagram.png…]()
+
 The core engineering focus of this project is **database preservation via stateful in-memory window aggregation**. By decoupling the ingestion tier from the storage tier and micro-batching records in memory, the system mitigates database write-storms, connection pool starvation, and disk I/O bottlenecks.
 <img width="736" height="350" alt="Screenshot 2026-06-13 at 5 09 22 PM" src="https://github.com/user-attachments/assets/a163aeea-4807-4583-9474-e11b83574578" />
 
